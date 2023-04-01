@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define fastIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define int long long int
+int32_t main(){
+   fastIO
+   int T; cin>>T;
+   while(T--){
+	 //GO BACK AND UNDERSTAND THE PROBLEM!!
+	  int n; cin>>n;
+		int w=0;
+		bool ok=0;
+		rep(i,0,n){
+			int t; cin>>t;
+			w+=t;
+			if(t==1)ok=1;
+		}
+	  if(w&1){
+		  cout<<"No\n";
+		  continue;
+	  }
+	  w/=2;
+	  if(w%2){
+		  cout<<(ok?"Yes\n":"No\n");
+	  }
+	  else cout<<"Yes\n";
+   }
+   return 0;
+}
