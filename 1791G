@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+#define int long long int
+using namespace std;
+
+void solve(){
+
+int n;
+int c;
+
+cin>>n;
+cin>>c;
+
+vector<int> a(n);
+for(int i=0;i<n;i++){
+    cin>>a[i];
+}
+int ans=0;
+for(int i=0;i<n;i++){
+    a[i]=a[i]+i+1;
+}
+sort(a.begin(),a.end());
+int ha=0;
+for(int i=0;i<n;i++){
+   ans+=a[i];
+
+   if(ans>c){
+    break;
+   }
+   else{
+    ha++;
+   }
+}
+cout<<ha<<endl;
+}
+int32_t main(){
+
+int t=1;
+cin>>t;
+while(t--){
+
+    solve();
+}
+return 0;}
+ 
